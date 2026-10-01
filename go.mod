@@ -1,5 +1,5 @@
 module github.com/llarhub/libcxx
 
-go 1.20
+go 1.23
 
-require github.com/goplus/lib v0.5.4
+require github.com/goplus/lib v0.5.5
