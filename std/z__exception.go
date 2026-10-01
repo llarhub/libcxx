@@ -15,14 +15,14 @@ type BadException struct {
 }
 
 // llgo:type C
-type _xgo_vtable_Exception struct {
+type X_vtable_Exception struct {
 	XGo_dtor          func(this *Exception)
 	XGo_dtor_deleting func(this *Exception)
 	What              func(this *Exception) *c.Char
 }
 
-func (p *Exception) XGo_vptr() *_xgo_vtable_Exception {
-	return (*_xgo_vtable_Exception)(p._xgo_vptr)
+func (p *Exception) XGo_vptr() *X_vtable_Exception {
+	return (*X_vtable_Exception)(p._xgo_vptr)
 }
 
 // llgo:link (*Exception).XGo_Dtor C._ZNSt9exceptionD1Ev
@@ -35,14 +35,14 @@ func (this *Exception) What() *c.Char {
 }
 
 // llgo:type C
-type _xgo_vtable_BadException struct {
+type X_vtable_BadException struct {
 	XGo_dtor          func(this *BadException)
 	XGo_dtor_deleting func(this *BadException)
 	What              func(this *BadException) *c.Char
 }
 
-func (p *BadException) XGo_vptr() *_xgo_vtable_BadException {
-	return (*_xgo_vtable_BadException)(*(*unsafe.Pointer)(unsafe.Pointer(p)))
+func (p *BadException) XGo_vptr() *X_vtable_BadException {
+	return (*X_vtable_BadException)(*(*unsafe.Pointer)(unsafe.Pointer(p)))
 }
 
 // llgo:link (*BadException).XGo_Dtor C._ZNSt13bad_exceptionD1Ev

@@ -33,13 +33,13 @@ type BadTypeid struct {
 }
 
 // llgo:type C
-type _xgo_vtable_TypeInfo struct {
+type X_vtable_TypeInfo struct {
 	XGo_dtor          func(this *TypeInfo)
 	XGo_dtor_deleting func(this *TypeInfo)
 }
 
-func (p *TypeInfo) XGo_vptr() *_xgo_vtable_TypeInfo {
-	return (*_xgo_vtable_TypeInfo)(p._xgo_vptr)
+func (p *TypeInfo) XGo_vptr() *X_vtable_TypeInfo {
+	return (*X_vtable_TypeInfo)(p._xgo_vptr)
 }
 
 // llgo:link (*TypeInfo).XGo_Dtor C._ZNSt9type_infoD1Ev
@@ -47,14 +47,14 @@ func (this *TypeInfo) XGo_Dtor() {
 }
 
 // llgo:type C
-type _xgo_vtable_BadCast struct {
+type X_vtable_BadCast struct {
 	XGo_dtor          func(this *BadCast)
 	XGo_dtor_deleting func(this *BadCast)
 	What              func(this *BadCast) *c.Char
 }
 
-func (p *BadCast) XGo_vptr() *_xgo_vtable_BadCast {
-	return (*_xgo_vtable_BadCast)(*(*unsafe.Pointer)(unsafe.Pointer(p)))
+func (p *BadCast) XGo_vptr() *X_vtable_BadCast {
+	return (*X_vtable_BadCast)(*(*unsafe.Pointer)(unsafe.Pointer(p)))
 }
 
 // llgo:link (*BadCast).XGo_Ctor__0 C._ZNSt8bad_castC1Ev
@@ -71,14 +71,14 @@ func (this *BadCast) What() *c.Char {
 }
 
 // llgo:type C
-type _xgo_vtable_BadTypeid struct {
+type X_vtable_BadTypeid struct {
 	XGo_dtor          func(this *BadTypeid)
 	XGo_dtor_deleting func(this *BadTypeid)
 	What              func(this *BadTypeid) *c.Char
 }
 
-func (p *BadTypeid) XGo_vptr() *_xgo_vtable_BadTypeid {
-	return (*_xgo_vtable_BadTypeid)(*(*unsafe.Pointer)(unsafe.Pointer(p)))
+func (p *BadTypeid) XGo_vptr() *X_vtable_BadTypeid {
+	return (*X_vtable_BadTypeid)(*(*unsafe.Pointer)(unsafe.Pointer(p)))
 }
 
 // llgo:link (*BadTypeid).XGo_Ctor__0 C._ZNSt10bad_typeidC1Ev
