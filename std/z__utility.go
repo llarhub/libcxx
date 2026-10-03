@@ -2,5 +2,5 @@
 
 package std
 
-type X_1_Empty struct {
+type X_1__Empty struct {
 }

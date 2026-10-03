@@ -4,6 +4,4 @@ package std
 
 import "github.com/goplus/lib/c"
 
-type X_1SizeT = c.SizeT
-type X_1NullptrT = c.UintptrT
-type X_1PtrdiffT = c.PtrdiffT
+type NullptrT = c.UintptrT
