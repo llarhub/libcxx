@@ -9,22 +9,23 @@ import (
 
 const X_LIBCPP_TYPEINFO_COMPARISON_IMPLEMENTATION = 3
 
-type X_TypeInfoImplementations__StringImplBase struct {
+type X__TypeInfoImplementations__StringImplBase struct {
 }
-type X_TypeInfoImplementations__StringImplBase__TypeNameT = *c.Char
-type X_TypeInfoImplementations__UniqueImpl struct {
-	X_TypeInfoImplementations__StringImplBase
+type X__TypeInfoImplementations__StringImplBase__TypeNameT = *c.Char
+type X__TypeInfoImplementations__UniqueImpl struct {
+	X__TypeInfoImplementations__StringImplBase
 }
-type X_TypeInfoImplementations__NonUniqueImpl struct {
-	X_TypeInfoImplementations__StringImplBase
+type X__TypeInfoImplementations__NonUniqueImpl struct {
+	X__TypeInfoImplementations__StringImplBase
 }
-type X_TypeInfoImplementations__NonUniqueArmRttiBitImpl struct {
+type X__TypeInfoImplementations__NonUniqueArmRttiBitImpl struct {
 }
-type X_TypeInfoImplementations__NonUniqueArmRttiBitImpl__TypeNameT = c.UintptrT
-type X_TypeInfoImplementations__Impl = X_TypeInfoImplementations__NonUniqueArmRttiBitImpl
+type UintptrT = c.UintptrT
+type X__TypeInfoImplementations__NonUniqueArmRttiBitImpl__TypeNameT = UintptrT
+type X__TypeInfoImplementations__Impl = X__TypeInfoImplementations__NonUniqueArmRttiBitImpl
 type TypeInfo struct {
 	_xgo_vptr  unsafe.Pointer
-	__TypeName X_TypeInfoImplementations__NonUniqueArmRttiBitImpl__TypeNameT
+	__TypeName X__TypeInfoImplementations__NonUniqueArmRttiBitImpl__TypeNameT
 }
 type BadCast struct {
 	Exception

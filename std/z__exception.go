@@ -15,6 +15,23 @@ type BadException struct {
 }
 
 // llgo:type C
+type TerminateHandler = func()
+type ExceptionPtr struct {
+	__Ptr_ unsafe.Pointer
+}
+type X__Cxxabiv1___CxaException struct {
+}
+type ExceptionPtr__TriviallyRelocatable = ExceptionPtr
+type NestedException struct {
+	_xgo_vptr unsafe.Pointer
+	__Ptr_    ExceptionPtr
+}
+type X__Nested[_Tp any] struct {
+	NestedException
+	_Tp _Tp
+}
+
+// llgo:type C
 type X_vtable_Exception struct {
 	XGo_dtor          func(this *Exception)
 	XGo_dtor_deleting func(this *Exception)
@@ -53,3 +70,73 @@ func (this *BadException) XGo_Dtor() {
 func (this *BadException) What() *c.Char {
 	return nil
 }
+
+//go:linkname SetTerminate C._ZSt13set_terminatePFvvE
+func SetTerminate(_llcppg_param1 TerminateHandler) TerminateHandler
+
+//go:linkname GetTerminate C._ZSt13get_terminatev
+func GetTerminate() TerminateHandler
+
+//go:linkname UncaughtException C._ZSt18uncaught_exceptionv
+func UncaughtException() bool
+
+//go:linkname UncaughtExceptions C._ZSt19uncaught_exceptionsv
+func UncaughtExceptions() c.Int
+
+//go:linkname CurrentException C._ZSt17current_exceptionv
+func CurrentException() ExceptionPtr
+
+//go:linkname RethrowException C._ZSt17rethrow_exceptionSt13exception_ptr
+func RethrowException(_llcppg_param1 ExceptionPtr)
+
+//go:linkname X__Cxxabiv1___CxaAllocateException C.__cxa_allocate_exception
+func X__Cxxabiv1___CxaAllocateException(_llcppg_param1 X__1SizeT) unsafe.Pointer
+
+//go:linkname X__Cxxabiv1___CxaFreeException C.__cxa_free_exception
+func X__Cxxabiv1___CxaFreeException(_llcppg_param1 unsafe.Pointer)
+
+//go:linkname X__Cxxabiv1___CxaInitPrimaryException C.__cxa_init_primary_exception
+func X__Cxxabiv1___CxaInitPrimaryException(_llcppg_param1 unsafe.Pointer, _llcppg_param2 *TypeInfo, _llcppg_param3 func(_llcppg_param1 unsafe.Pointer)) *X__Cxxabiv1___CxaException
+
+// llgo:link (*ExceptionPtr).XGo_Ctor__2 C._ZNSt13exception_ptrC1ERKS_
+func (this *ExceptionPtr) XGo_Ctor__2(_llcppg_param1 *ExceptionPtr) {
+}
+
+// llgo:link (*ExceptionPtr).XGo_Dtor C._ZNSt13exception_ptrD1Ev
+func (this *ExceptionPtr) XGo_Dtor() {
+}
+
+// llgo:type C
+type X_vtable_NestedException struct {
+	XGo_dtor          func(this *NestedException)
+	XGo_dtor_deleting func(this *NestedException)
+}
+
+func (p *NestedException) XGo_vptr() *X_vtable_NestedException {
+	return (*X_vtable_NestedException)(p._xgo_vptr)
+}
+
+// llgo:link (*NestedException).XGo_Ctor__0 C._ZNSt16nested_exceptionC1Ev
+func (this *NestedException) XGo_Ctor__0() {
+}
+
+// llgo:link (*NestedException).XGo_Dtor C._ZNSt16nested_exceptionD1Ev
+func (this *NestedException) XGo_Dtor() {
+}
+
+// llgo:link (*NestedException).RethrowNested C._ZNKSt16nested_exception14rethrow_nestedEv
+func (this *NestedException) RethrowNested() {
+}
+
+// llgo:type C
+type X_vtable_X__Nested[_Tp any] struct {
+	XGo_dtor          func(this *X__Nested[_Tp])
+	XGo_dtor_deleting func(this *X__Nested[_Tp])
+}
+
+func (p *X__Nested[_Tp]) XGo_vptr() *X_vtable_X__Nested[_Tp] {
+	return (*X_vtable_X__Nested[_Tp])(*(*unsafe.Pointer)(unsafe.Pointer(p)))
+}
+
+//go:linkname Terminate C._ZSt9terminatev
+func Terminate()

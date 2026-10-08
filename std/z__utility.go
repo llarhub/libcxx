@@ -2,5 +2,21 @@
 
 package std
 
-type X_1__Empty struct {
+import "github.com/goplus/lib/c"
+
+type X__1__ElementCount X__1SizeT
+type X__1SizeT = c.SizeT
+type X__1__Empty struct {
 }
+type X__1PiecewiseConstructT struct {
+}
+type X__1__CheckPairConstruction[_T1 any, _T2 any] struct {
+}
+type X__1__NonTriviallyCopyableBase[_llcppg_tparam1 any, _llcppg_tparam2 any] struct {
+}
+type X__1InPlaceT struct {
+}
+type X__1InPlaceTypeT[_Tp any] struct {
+}
+type X__Int128T = c.Int128T
+type X__Uint128T = c.Uint128T

@@ -7,5 +7,5 @@ import (
 	_ "unsafe"
 )
 
-//go:linkname X_1__LibcppVerboseAbort C._ZNSt3__122__libcpp_verbose_abortEPKcz
-func X_1__LibcppVerboseAbort(__format *c.Char, __llgo_va_list ...any)
+//go:linkname X__1__LibcppVerboseAbort C._ZNSt3__122__libcpp_verbose_abortEPKcz
+func X__1__LibcppVerboseAbort(__format *c.Char, __llgo_va_list ...any)

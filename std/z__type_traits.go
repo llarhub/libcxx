@@ -7,50 +7,102 @@ import (
 	_ "unsafe"
 )
 
-type X_1RemoveCv[_Tp any] struct {
+type X__1RemoveReference[_Tp any] struct {
 }
-type X_1AddConst[_Tp any] struct {
+type X__1AddPointer[_Tp any] struct {
 }
-type X_1AddCv[_Tp any] struct {
+type X__1Decay[_Tp any] struct {
 }
-type X_1AddVolatile[_Tp any] struct {
+type X__1__TypeIdentity[_Tp any] struct {
 }
-type X_1RemoveReference[_Tp any] struct {
+type X__1AddLvalueReference[_Tp any] struct {
 }
-type X_1AddPointer[_Tp any] struct {
+type X__1AddRvalueReference[_Tp any] struct {
 }
-type X_1AddLvalueReference[_Tp any] struct {
+type X__1RemoveCv[_Tp any] struct {
 }
-type X_1AddRvalueReference[_Tp any] struct {
+type X__1RemoveAllExtents[_Tp any] struct {
 }
-type X_1_AlignedAsT[_Tp any] struct {
+type X__1__Nat struct {
 }
-type X_1__StructDouble struct {
-	X_Lx c.LongDouble
+type X__1MakeSigned[_Tp any] struct {
 }
-type X_1__StructDouble4 struct {
-	X_Lx [4]c.Double
+type X__1RemoveExtent[_Tp any] struct {
 }
-type X_1Decay[_Tp any] struct {
+type X__1RemoveConst[_Tp any] struct {
 }
-type X_1__TypeIdentity[_Tp any] struct {
+type X__1AddConst[_Tp any] struct {
 }
-type X_1RemoveAllExtents[_Tp any] struct {
+type X__1AddCv[_Tp any] struct {
 }
-type X_1MakeSigned[_Tp any] struct {
+type X__1AddVolatile[_Tp any] struct {
 }
-type X_1MakeUnsigned[_Tp any] struct {
+type X__1_AlignedAsT[_Tp any] struct {
 }
-type X_1RemoveConst[_Tp any] struct {
+type X__1__StructDouble struct {
+	X__Lx c.LongDouble
 }
-type X_1RemoveExtent[_Tp any] struct {
+type X__1__StructDouble4 struct {
+	X__Lx [4]c.Double
 }
-type X_1RemovePointer[_Tp any] struct {
+type X__1MakeUnsigned[_Tp any] struct {
 }
-type X_1RemoveVolatile[_Tp any] struct {
+type X__1RemovePointer[_Tp any] struct {
 }
-type X_1__Nat struct {
+type X__1RemoveVolatile[_Tp any] struct {
+}
+type X__1__EqualTag struct {
+}
+type X__1__PlusTag struct {
+}
+type X__1__LessTag struct {
+}
+type X__1__GreaterTag struct {
+}
+type X__1__TotallyOrderedLessTag struct {
+}
+type X__1_FirstPaddingByte[_Tp any] struct {
+	X__V_                _Tp
+	X__FirstPaddingByte_ c.Char
+}
+type X__1__IsAlwaysBitcastable[_From any, _To any] struct {
 }
 
-//go:linkname X_1__AlignedStorageMaxAlign C._ZNSt3__127__aligned_storage_max_alignE
-var X_1__AlignedStorageMaxAlign X_1SizeT
+//go:linkname X__1__AlignedStorageMaxAlign C._ZNSt3__127__aligned_storage_max_alignE
+var X__1__AlignedStorageMaxAlign X__1SizeT
+
+//go:linkname X__1__PromoteImpl__0 C._ZNSt3__114__promote_implEf
+func X__1__PromoteImpl__0(_llcppg_param1 c.Float) c.Float
+
+//go:linkname X__1__PromoteImpl__1 C._ZNSt3__114__promote_implEc
+func X__1__PromoteImpl__1(_llcppg_param1 c.Char) c.Double
+
+//go:linkname X__1__PromoteImpl__2 C._ZNSt3__114__promote_implEi
+func X__1__PromoteImpl__2(_llcppg_param1 c.Int) c.Double
+
+//go:linkname X__1__PromoteImpl__3 C._ZNSt3__114__promote_implEj
+func X__1__PromoteImpl__3(_llcppg_param1 c.Uint) c.Double
+
+//go:linkname X__1__PromoteImpl__4 C._ZNSt3__114__promote_implEl
+func X__1__PromoteImpl__4(_llcppg_param1 c.Long) c.Double
+
+//go:linkname X__1__PromoteImpl__5 C._ZNSt3__114__promote_implEm
+func X__1__PromoteImpl__5(_llcppg_param1 c.Ulong) c.Double
+
+//go:linkname X__1__PromoteImpl__6 C._ZNSt3__114__promote_implEx
+func X__1__PromoteImpl__6(_llcppg_param1 c.LongLong) c.Double
+
+//go:linkname X__1__PromoteImpl__7 C._ZNSt3__114__promote_implEy
+func X__1__PromoteImpl__7(_llcppg_param1 c.UlongLong) c.Double
+
+//go:linkname X__1__PromoteImpl__8 C._ZNSt3__114__promote_implEn
+func X__1__PromoteImpl__8(_llcppg_param1 X__Int128T) c.Double
+
+//go:linkname X__1__PromoteImpl__9 C._ZNSt3__114__promote_implEo
+func X__1__PromoteImpl__9(_llcppg_param1 X__Uint128T) c.Double
+
+//go:linkname X__1__PromoteImpl__a C._ZNSt3__114__promote_implEd
+func X__1__PromoteImpl__a(_llcppg_param1 c.Double) c.Double
+
+//go:linkname X__1__PromoteImpl__b C._ZNSt3__114__promote_implEe
+func X__1__PromoteImpl__b(_llcppg_param1 c.LongDouble) c.LongDouble

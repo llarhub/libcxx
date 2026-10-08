@@ -2,4 +2,13 @@
 
 package std
 
+import "github.com/goplus/lib/c"
+
 type Byte uint8
+type X__1Pair[_T1 any, _T2 any] struct {
+	First  _T1
+	Second _T2
+}
+type X__1IosBase struct {
+}
+type X__1Streamoff = c.LongLong
