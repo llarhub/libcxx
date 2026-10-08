@@ -74,66 +74,6 @@ func X__ThrowBadAlloc()
 //go:linkname Nothrow C._ZSt7nothrow
 var Nothrow NothrowT
 
-//go:linkname New__0 C._Znwm
-func New__0(__sz X__1SizeT) unsafe.Pointer
-
-//go:linkname New__2 C._ZnwmRKSt9nothrow_t
-func New__2(__sz X__1SizeT, _llcppg_param2 *NothrowT) unsafe.Pointer
-
-//go:linkname Delete__0 C._ZdlPv
-func Delete__0(__p unsafe.Pointer)
-
-//go:linkname Delete__2 C._ZdlPvRKSt9nothrow_t
-func Delete__2(__p unsafe.Pointer, _llcppg_param2 *NothrowT)
-
-//go:linkname Delete__3 C._ZdlPvm
-func Delete__3(__p unsafe.Pointer, __sz X__1SizeT)
-
-//go:linkname New[]__0 C._Znam
-func New[]__0(__sz X__1SizeT) unsafe.Pointer
-
-//go:linkname New[]__2 C._ZnamRKSt9nothrow_t
-func New[]__2(__sz X__1SizeT, _llcppg_param2 *NothrowT) unsafe.Pointer
-
-//go:linkname Delete[]__0 C._ZdaPv
-func Delete[]__0(__p unsafe.Pointer)
-
-//go:linkname Delete[]__2 C._ZdaPvRKSt9nothrow_t
-func Delete[]__2(__p unsafe.Pointer, _llcppg_param2 *NothrowT)
-
-//go:linkname Delete[]__3 C._ZdaPvm
-func Delete[]__3(__p unsafe.Pointer, __sz X__1SizeT)
-
-//go:linkname New__3 C._ZnwmSt11align_val_t
-func New__3(__sz X__1SizeT, _llcppg_param2 AlignValT) unsafe.Pointer
-
-//go:linkname New__4 C._ZnwmSt11align_val_tRKSt9nothrow_t
-func New__4(__sz X__1SizeT, _llcppg_param2 AlignValT, _llcppg_param3 *NothrowT) unsafe.Pointer
-
-//go:linkname Delete__4 C._ZdlPvSt11align_val_t
-func Delete__4(__p unsafe.Pointer, _llcppg_param2 AlignValT)
-
-//go:linkname Delete__5 C._ZdlPvSt11align_val_tRKSt9nothrow_t
-func Delete__5(__p unsafe.Pointer, _llcppg_param2 AlignValT, _llcppg_param3 *NothrowT)
-
-//go:linkname Delete__6 C._ZdlPvmSt11align_val_t
-func Delete__6(__p unsafe.Pointer, __sz X__1SizeT, _llcppg_param3 AlignValT)
-
-//go:linkname New[]__3 C._ZnamSt11align_val_t
-func New[]__3(__sz X__1SizeT, _llcppg_param2 AlignValT) unsafe.Pointer
-
-//go:linkname New[]__4 C._ZnamSt11align_val_tRKSt9nothrow_t
-func New[]__4(__sz X__1SizeT, _llcppg_param2 AlignValT, _llcppg_param3 *NothrowT) unsafe.Pointer
-
-//go:linkname Delete[]__4 C._ZdaPvSt11align_val_t
-func Delete[]__4(__p unsafe.Pointer, _llcppg_param2 AlignValT)
-
-//go:linkname Delete[]__5 C._ZdaPvSt11align_val_tRKSt9nothrow_t
-func Delete[]__5(__p unsafe.Pointer, _llcppg_param2 AlignValT, _llcppg_param3 *NothrowT)
-
-//go:linkname Delete[]__6 C._ZdaPvmSt11align_val_t
-func Delete[]__6(__p unsafe.Pointer, __sz X__1SizeT, _llcppg_param3 AlignValT)
-
 //go:linkname SetNewHandler C._ZSt15set_new_handlerPFvvE
 func SetNewHandler(_llcppg_param1 NewHandler) NewHandler
 
