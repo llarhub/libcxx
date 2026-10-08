@@ -21,9 +21,7 @@ type X__1__HasIteratorTypedefs[_Tp any] struct {
 }
 type X__1Iterator[_Category any, _Tp any, _Distance any, _Pointer any, _Reference any] struct {
 }
-type X__1__IteratorBase[_Derived any, _Category any, _Tp any, _Distance any, _Pointer any, _Reference any] = X__1Iterator[_Category, _Tp, _Distance, _Pointer, _Reference]
 type X__1BackInsertIterator[_Container any] struct {
-	X__1__IteratorBase[X__1BackInsertIterator[_Container], X__1OutputIteratorTag, c.Void, c.Void, c.Void, c.Void]
 	container *_Container
 }
 type X__1BackInsertIteratorIteratorCategory[_Container any] = X__1OutputIteratorTag
@@ -32,7 +30,6 @@ type X__1BackInsertIteratorDifferenceType[_Container any] = c.Void
 type X__1BackInsertIteratorPointer[_Container any] = c.Void
 type X__1BackInsertIteratorReference[_Container any] = c.Void
 type X__1FrontInsertIterator[_Container any] struct {
-	X__1__IteratorBase[X__1FrontInsertIterator[_Container], X__1OutputIteratorTag, c.Void, c.Void, c.Void, c.Void]
 	container *_Container
 }
 type X__1FrontInsertIteratorIteratorCategory[_Container any] = X__1OutputIteratorTag
@@ -57,7 +54,6 @@ type X__1OstreamIteratorDifferenceType[_Tp any, _CharT any, _Traits any] = c.Voi
 type X__1OstreamIteratorPointer[_Tp any, _CharT any, _Traits any] = c.Void
 type X__1OstreamIteratorReference[_Tp any, _CharT any, _Traits any] = c.Void
 type X__1ReverseIterator[_Iter any] struct {
-	X__1__IteratorBase
 	__T_    _Iter
 	current _Iter
 }
